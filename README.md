@@ -46,6 +46,8 @@ Follow these steps for completing your project.
 - You have been commissioned to implement Redux as the state management system in this app
 - You have the freedom to manage the state how you would like - ie, connecting multiple components to pass data directly to them, or maybe connecting one component, and then putting the data into a context object.
 
+I will connect mulriple components and pass data directly to them
+
 ## Directions
 
 **Step 1 - Planning 📝**
