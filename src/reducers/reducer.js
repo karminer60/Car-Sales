@@ -1,3 +1,5 @@
+import {ADD} from '../actions/actions';
+
 export const initialState = {
   descriptionCar: {
     additionalPrice: 0,
@@ -39,30 +41,29 @@ export const reducer = (state = initialState, action) => {
     // same as if, else if, ... , else
     switch (action.type) {
         case 'ADD':
-            const newItem = {
-                name: action.name ,
-                id: new Date(),
-                completed: false
-              };
-            return [...state, newItem];
+          const newItem = {
+            additionalFeatures
+          }
+            
+            return {
+              ...state,
+              descriptionCar: {
+                ...state.descriptionCar,
+                car:{
+                  ...state.descriptionCar.car,
+                  features:{
+                    ...statedescriptionCar.car.features, newItem
+
+                  }
+                }
+              }
+            };
         case 'CLEAR':
             return state.filter(item => {
                 if (item.completed) {
                   return false;
                 } else {
                   return true;
-                }
-              })
-            
-        case 'TOGGLE':
-             return state.map(item => {
-                if (item.id === action.id) {
-                  return {
-                    ...item,
-                    completed: !item.completed
-                  };
-                } else {
-                  return item;
                 }
               })
             
