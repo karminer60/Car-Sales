@@ -1,12 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {addFeature} from '../actions/actions.js';
+import {clearFeature} from '../actions/actions.js';
+
 
 const AddedFeature = props => {
   return (
     <li>
       {/* Add an onClick to run a function to remove a feature */}
-      <button className="button" onClick={() => props.dispatch({ type: "CLEAR" })}>X</button>
+      <button className="button" onClick={() => props.clearFeature(props.id)}>X</button>
       {props.feature.name}
     </li>
   );
@@ -22,5 +23,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {addFeature}
+  {}
 )(AddedFeature);

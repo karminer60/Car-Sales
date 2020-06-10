@@ -40,15 +40,7 @@ export const reducer = (state = initialState, action) => {
 
     // same as if, else if, ... , else
     switch (action.type) {
-        case 'ADD':
-          const newItem = [
-
-              
-              action.payload,
-              
-          ]
-          
-            
+        case 'ADD':            
             return {
               ...state,
               descriptionCar: {
@@ -56,20 +48,33 @@ export const reducer = (state = initialState, action) => {
                 car:{
                   ...state.descriptionCar.car,
                   features:[ 
-                    ...state.descriptionCar.car.features, newItem
-
+                    ...state.descriptionCar.car.features,
+                    action.payload
                 ]
                 }
               }
             };
         case 'CLEAR':
-            return state.filter(item => {
-                if (item.completed) {
-                  return false;
-                } else {
-                  return true;
-                }
-              })
+          
+          return {
+            ...state,
+            descriptionCar: {
+              ...state.descriptionCar,
+              car:{
+                ...state.descriptionCar.car,
+                features: 
+                  state.descriptionCar.car.features.filter( item =>{
+                    if (item.id == action.id) {
+                      return false;
+                    } else {
+                      return true;
+                    }
+                  }),
+                  
+              
+              }
+            }
+          };
             
         default:
             return state;
