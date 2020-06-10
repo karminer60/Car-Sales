@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {addFeature} from '../actions/actions.js';
 
 const AdditionalFeature = props => {
   return (
@@ -7,7 +8,7 @@ const AdditionalFeature = props => {
       {/* Add an onClick that will let you add a feature to your car */}
 
       
-      <button className="button"onClick={() => props.dispatch({ type: "ADD" })}>Add</button>
+      <button className="button"onClick={() => props.addFeature(props.feature)}>Add</button>
       {props.feature.name} (+{props.feature.price})
     </li>
   );
@@ -16,12 +17,11 @@ const AdditionalFeature = props => {
 const mapStateToProps = state => {
   console.log(state);
   return {
-    title: state.titleReducer.title,
-    editing: state.titleReducer.editing
+   
   };
 };
 
 export default connect(
   mapStateToProps,
-  {}
+  {addFeature}
 )(AdditionalFeature);
