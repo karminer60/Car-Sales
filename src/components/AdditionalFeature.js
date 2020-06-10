@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {addFeature} from '../actions/actions.js';
 
 const AdditionalFeature = props => {
-  debugger;
+  
   return (
     
 
@@ -17,14 +17,9 @@ const AdditionalFeature = props => {
   );
 };
 
-const mapStateToProps = state => {
-  console.log(state);
-  return {
-   
-  };
-};
+
 
 export default connect(
-  mapStateToProps,
+  null,
   {addFeature}
 )(AdditionalFeature);

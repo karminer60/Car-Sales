@@ -7,21 +7,16 @@ const AddedFeature = props => {
   return (
     <li>
       {/* Add an onClick to run a function to remove a feature */}
-      <button className="button" onClick={() => props.clearFeature(props.id)}>X</button>
+      <button className="button" onClick={() => props.clearFeature(props.feature)}>X</button>
       {props.feature.name}
     </li>
   );
 };
 
-const mapStateToProps = state => {
-  console.log(state);
-  return {
-   
-  };
-};
+
 
 
 export default connect(
-  mapStateToProps,
-  {}
+  null,
+  {clearFeature}
 )(AddedFeature);

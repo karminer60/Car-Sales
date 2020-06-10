@@ -47,24 +47,25 @@ export const reducer = (state = initialState, action) => {
                 ...state.descriptionCar,
                 car:{
                   ...state.descriptionCar.car,
+                  price: state.descriptionCar.car.price + action.feature.price,
                   features:[ 
                     ...state.descriptionCar.car.features,
-                    action.payload
+                    action.feature
                 ]
                 }
               }
             };
         case 'CLEAR':
-          
+         debugger; 
           return {
             ...state,
             descriptionCar: {
               ...state.descriptionCar,
               car:{
                 ...state.descriptionCar.car,
-                features: 
-                  state.descriptionCar.car.features.filter( item =>{
-                    if (item.id == action.id) {
+                price: state.descriptionCar.car.price - action.feature.price,
+                features: state.descriptionCar.car.features.filter( item =>{
+                    if (item.id == action.feature.id) {
                       return false;
                     } else {
                       return true;
