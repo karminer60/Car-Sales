@@ -41,12 +41,12 @@ export const reducer = (state = initialState, action) => {
     // same as if, else if, ... , else
     switch (action.type) {
         case 'ADD':
-          const newItem = {
+          const newItem = [
 
-              id:  action.hereload,
-              name: action.payload ,
-              price: action.aceload,
-            }
+              
+              action.payload,
+              
+          ]
           
             
             return {
@@ -55,10 +55,10 @@ export const reducer = (state = initialState, action) => {
                 ...state.descriptionCar,
                 car:{
                   ...state.descriptionCar.car,
-                  features:{
+                  features:[ 
                     ...state.descriptionCar.car.features, newItem
 
-                  }
+                ]
                 }
               }
             };

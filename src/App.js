@@ -29,7 +29,7 @@ const App = (props) => {
 };
 
 const mapStateToProps = (state)=> {
-  debugger;
+  
   return {
     descriptionCar: state.descriptionCar
   }
