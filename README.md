@@ -22,12 +22,12 @@ In this project you will implement Redux to manage the state for this React appl
 
 This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository in your terminal.
-- [ ] Download project dependencies by running `npm install`.
+- [+ ] Create a forked copy of this project.
+- [+ ] Add your team lead as collaborator on Github.
+- [ +] Clone your OWN version of the repository in your terminal.
+- [ +] Download project dependencies by running `npm install`.
 - [ ] Add the dependencies you will need to implement Redux, using **npm**.
-- [ ] Start up the app using `npm start`.
+- [+ ] Start up the app using `npm start`.
 - [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
       Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
@@ -45,6 +45,8 @@ Follow these steps for completing your project.
 - You will be starting with a structured and styled app
 - You have been commissioned to implement Redux as the state management system in this app
 - You have the freedom to manage the state how you would like - ie, connecting multiple components to pass data directly to them, or maybe connecting one component, and then putting the data into a context object.
+
+I will connect mulriple components and pass data directly to them
 
 ## Directions
 
